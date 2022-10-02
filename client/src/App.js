@@ -1,24 +1,18 @@
 import "./App.css";
-// import { DisplayBoard } from "./components/DisplayBoard";
-// import Search from "./components/Search";
-import { useState } from "react";
+
+import { useState,useEffect } from "react";
 import TravelSearch from "./components/TravelSearch";
 
 function App() {
-  const [input, setInput] = useState("");
+
+  useEffect(() => {
+    document.title = 'เที่ยวไหนดี';
+  });
+
 
   return (
     <div className="App">
-      {/* <Search input={input} setInput={setInput} />
-      <DisplayBoard input={input} setInput={setInput} /> */}
-
-
       <TravelSearch />
-
-      
-
-
-
     </div>
   );
 }
