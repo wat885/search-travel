@@ -1,0 +1,141 @@
+.containerSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* max-width: 1680px; */
+  margin: 0 auto;
+  /* border: 1px solid black; */
+}
+
+.topic {
+  color: #2f9bdb;
+  font-size: 3rem;
+}
+
+.searchBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.search {
+  width: 100%;
+  border: 1px solid black;
+
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+  border: none;
+  border-bottom: 2px solid #e4e4e4;
+
+  outline-style: none;
+}
+
+.search::placeholder {
+  text-align: center;
+}
+
+/* ///////////////////// */
+
+.items-content {
+
+  /* border: 1px solid black; */
+  width: 80%;
+}
+
+.item {
+  margin-top: 20px;
+  border: 1px solid red;
+
+  display: flex;
+}
+
+.content{
+  margin-left: 20px;
+}
+
+.left-img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10%;
+  /* zoom */
+
+  /* width: 300px;
+  height: 200px;
+  border-radius: 25px;
+  margin-right: 30px;
+  overflow: hidden;
+  object-fit: fill; */
+
+
+}
+
+.location-name {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* https://stackoverflow.com/questions/7546389/css-overflow-only-1-line-of-text */
+
+  margin: 4px 0 0 0;
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.read-more{
+  font-size: 0.7rem;
+  color: #2f9bdb;
+}
+
+.group-tags{
+  /* background-color: rgb(193, 187, 187); */
+  /* display: flex; */
+}
+
+.group-tags .tag{
+  font-size: 0.7rem;
+  color: gray;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.group-tags span{
+  font-size: 0.65rem;
+  margin-right: 5px;
+}
+
+.groupImg img{
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  /* zoom */
+  border-radius: 10%;
+  margin: 10px 20px 0 0;
+
+}
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+  .searchBox {
+    width: 80%;
+  }
+  .topic {
+    font-size: 2rem;
+  }
+  .searchLabel {
+    font-size: 0.8rem;
+  }
+}

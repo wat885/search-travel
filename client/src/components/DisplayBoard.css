@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1680px;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+}
+
+.box-content {
+  width: 90%;
+  height: 100%;
+  margin: 30px auto;
+  /* border: 1px solid black; */
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  padding: 30px;
+}
+
+.mainImage {
+  width: 300px;
+  height: 200px;
+  border-radius: 25px;
+  margin-right: 30px;
+  overflow: hidden;
+  object-fit: fill;
+}
+
+.subImage {
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+h1 {
+  margin: 5px 0;
+  font-size: 24px;
+}
+
+.conntent h1 a {
+  color: black;
+  text-decoration: none;
+}
+
+h2 {
+  margin: 5px 0;
+  font-size: 21px;
+  color: gray;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+h3 {
+  margin: 5px 0;
+}
+
+h3 a {
+  color: rgb(54, 179, 241);
+}
+
+.catergory {
+  display: flex;
+  align-items: center;
+}
+
+.catergory > h3 {
+  margin-right: 5px;
+}
+
+.tag {
+  margin-right: 5px;
+  color: gray;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.and {
+  padding-right: 5px;
+}
+
+.otherImg {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyButton {
+  width: 30px;
+  color: #38a0dd;
+  margin-top: 45px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1023px) {
+  .box-content {
+    /* background-color: crimson; */
+  }
+  .conntent h1 a {
+    font-size: 1.4rem;
+  }
+  .conntent h2 {
+    font-size: 1.1rem;
+  }
+  .conntent h3 {
+    font-size: 1.1rem;
+  }
+  .catergory {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .box-content {
+    width: 80%;
+    height: 100%;
+    /* margin: 30px auto; */
+
+    padding: 0;
+  }
+  .box-content {
+    /* background-color: rgb(165, 165, 165); */
+  }
+  .catergory {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+  }
+
+  .box-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .boxImg {
+    margin-bottom: 10px;
+  }
+
+  .conntent h1 a {
+    font-size: 1rem;
+    /* margin-top: 20px; */
+    /* background-color: antiquewhite; */
+  }
+  .conntent h2 {
+    margin-top: 10px;
+    font-size: 0.8rem;
+  }
+  .conntent h3 {
+    margin-top: 10px;
+    font-size: 0.8rem;
+  }
+  .catergory {
+    margin-top: 10px;
+  }
+
+  .groupSubImage {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  .subImage {
+    margin-top: 10px;
+
+    /* margin-left: 10px; */
+  }
+}
