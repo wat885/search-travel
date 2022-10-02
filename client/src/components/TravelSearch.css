@@ -48,7 +48,7 @@
 
 .item {
   margin-top: 20px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
 }

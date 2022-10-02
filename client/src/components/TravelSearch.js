@@ -9,15 +9,23 @@ function TravelSearch() {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [input]);
 
   const getData = async () => {
-    const response = await axios.get("http://localhost:4001/trips?keywords=");
+    const response = await axios.get(
+      "http://localhost:4001/trips?keywords=" + input
+    );
     // console.log(response.data.data);
     setData(response.data.data);
   };
 
-  console.log(data);
+  // console.log(data);
+  // console.log(input);
+
+  const handleAdd = (value) => {
+    if (input === "") setInput(value);
+    else setInput(input + " " + value);
+  };
 
   return (
     <div className="containerSearch">
@@ -39,13 +47,13 @@ function TravelSearch() {
       </div>
 
       <div className="items-content">
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
-            <div className="item">
+            <div className="item" key={index}>
               <div>
-              <img src={item.photos[0]} className="left-img" />
+                <img src={item.photos[0]} className="left-img" />
               </div>
-              
+
               <div className="content">
                 <h2 className="location-name">{item.title}</h2>
                 <p className="description">{item.description}F</p>
@@ -55,8 +63,27 @@ function TravelSearch() {
                 <div className="group-tags">
                   <span>หมวด</span>
                   {item.tags.map((t, index) => {
-                    return (
-                      <span className="tag" key={index}>
+                    return index === item.tags.length - 1 ? (
+                      <>
+                        <span>และ</span>
+                        <span
+                          className="tag"
+                          key={index}
+                          onClick={() => {
+                            handleAdd(t);
+                          }}
+                        >
+                          {t}{" "}
+                        </span>
+                      </>
+                    ) : (
+                      <span
+                        className="tag"
+                        key={index}
+                        onClick={() => {
+                          handleAdd(t);
+                        }}
+                      >
                         {t}{" "}
                       </span>
                     );
